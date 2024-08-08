@@ -19,7 +19,8 @@ public class Animal : MonoBehaviour
     public Image barHunger;
     public Image barThirst;
     public Image barProduction;
-    public Text Text_Quantity_AnimalProduct;
+    // public Text Text_Quantity_AnimalProduct;
+    public Text Text_Animal_fence_counter;
 
     // Tempi di aggiornamento
     public float hungerDecreaseRate;
@@ -104,13 +105,16 @@ public class Animal : MonoBehaviour
 
     public void ButtonIncraseThirst()
     {
-        hunger += 0.01f;
+        thirst += 0.1f;
     }
 
 
     public void UpdateUi()
     {
-        Text_Quantity_AnimalProduct.text = NameProductAnimal + " = "  + quantity.ToString();
+        //  mostra la quantita del animale prodotto 
+        // Text_Quantity_AnimalProduct.text = NameProductAnimal + " = "  + quantity.ToString();
+
+        Text_Animal_fence_counter.text = gameManager.GetAnimalCount(NameAnimal).ToString() + " / 10";
     }
 
 

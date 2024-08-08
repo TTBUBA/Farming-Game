@@ -8,7 +8,7 @@ public class plant : MonoBehaviour
     public Sprite[] GrowSprites;
     public float timeStages = 2f;
     public string ItemType;
-    private TrakingRaccolto TrakingRaccolto;
+    private TrakingLocal TrakingRaccolto;
 
     public int CurrentStage = 0;
     private SpriteRenderer SpriteRenderer;
@@ -48,7 +48,7 @@ public class plant : MonoBehaviour
             if (other.gameObject.CompareTag("BoxPlayer"))
             {
 
-                TrakingRaccolto trakingRaccolto = other.GetComponent<TrakingRaccolto>();
+                TrakingLocal trakingRaccolto = other.GetComponent<TrakingLocal>();
                 if (trakingRaccolto != null)
                 {
                     trakingRaccolto.CollectItem(ItemType);

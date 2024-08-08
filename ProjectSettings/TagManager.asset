@@ -30,6 +30,8 @@ TagManager:
   - statistics_chicken
   - statistics_goat
   - statistics_pig
+  - Box_Silo
+  - Box_Magazzino
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class Tree : MonoBehaviour
     public int legnoricevuto = 0;
     public TextMeshProUGUI Text_Legno;
     private Animation textAnimation;
-    public TrakingRaccolto trakingRaccolto;
+    public TrakingLocal trakingRaccolto;
 
     void Start()
     {

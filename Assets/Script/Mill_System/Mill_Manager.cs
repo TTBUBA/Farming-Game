@@ -50,7 +50,7 @@ public class Mill_Manager : MonoBehaviour
     public int selectedSackIndex;   // Indice del sacchetto selezionato
     private Coroutine preparationTimerCoroutine;
 
-    public TrakingRaccolto trakingRaccolto;
+    public TrakingLocal trakingRaccolto;
 
     // Start is called before the first frame update
     void Start()
