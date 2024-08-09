@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
+
+
 
 public class Options : MonoBehaviour
 {
@@ -17,19 +18,18 @@ public class Options : MonoBehaviour
     {
         resolutions = Screen.resolutions;
 
-        
-
         dropdownResolution.ClearOptions();
-
-        List<string> options = new List<string>();
         
+        List<string> options = new List<string>();
+
         int CurrentResolutionIndex = 0;
         for (int i = 0; i < resolutions.Length; i++)
         {
+            // Debug.Log("Risoluzione disponibile: " + resolutions[i].width + "x" + resolutions[i].height);
             string option = resolutions[i].width + " x " + resolutions[i].height;
             options.Add(option);
-            
-            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
                 CurrentResolutionIndex = i;
             }
@@ -48,9 +48,13 @@ public class Options : MonoBehaviour
 
     public void SetResolution(int IndexResolution)
     {
+        if (IndexResolution < 0 || IndexResolution >= resolutions.Length) return;
+
         Resolution resolution = resolutions[IndexResolution];
+        Debug.Log("Cambiando risoluzione a: " + resolution.width + "x" + resolution.height);
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+
     public void Volumechange(float volume)
     {
         AudioBackGround.volume = volume;
@@ -65,6 +69,4 @@ public class Options : MonoBehaviour
     {
         Screen.fullScreen = IsFullscreen;
     }
-
-    
 }

@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour
     public GameObject Button_Exit_Box;
     public GameObject Ui_Chicken;
     public GameObject Ui_cow;
-    public GameObject Ui_goat;
+    public GameObject Ui_Sheep;
     public GameObject Ui_pig;
 
     [Header("UI Statistics_Magazzini")]
@@ -28,7 +28,7 @@ public class PlayerCollision : MonoBehaviour
         // collider con box degli animali 
         if (collider.gameObject.CompareTag("statistics_cow") ||
             collider.gameObject.CompareTag("statistics_chicken") ||
-            collider.gameObject.CompareTag("statistics_goat") ||
+            collider.gameObject.CompareTag("statistics_Sheep") ||
             collider.gameObject.CompareTag("statistics_pig"))
             
 
@@ -98,9 +98,9 @@ public class PlayerCollision : MonoBehaviour
         {
             Ui_Chicken.SetActive(true);
         }
-        else if (currentCollisionTag == "statistics_goat")
+        else if (currentCollisionTag == "statistics_Sheep")
         {
-            Ui_goat.SetActive(true);
+            Ui_Sheep.SetActive(true);
         }
         else if (currentCollisionTag == "statistics_pig")
         {
@@ -123,9 +123,9 @@ public class PlayerCollision : MonoBehaviour
         {
             Ui_Chicken.SetActive(false);
         }
-        else if (currentCollisionTag == "statistics_goat")
+        else if (currentCollisionTag == "statistics_Sheep")
         {
-            Ui_goat.SetActive(false);
+            Ui_Sheep.SetActive(false);
         }
         else if (currentCollisionTag == "statistics_pig")
         {

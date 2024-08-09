@@ -9,8 +9,8 @@ public class Animal : MonoBehaviour
     
 
     // Statistiche dell'animale
-    public float hunger = 1f;  // Livello di fame iniziale
-    public float thirst = 1f;  // Livello di sete iniziale
+    public float hunger = 0f;  // Livello di fame iniziale
+    public float thirst = 0f;  // Livello di sete iniziale
     public float production = 0f;  // Produzione iniziale
     public int quantity;
 
@@ -19,7 +19,7 @@ public class Animal : MonoBehaviour
     public Image barHunger;
     public Image barThirst;
     public Image barProduction;
-    // public Text Text_Quantity_AnimalProduct;
+    //public Text Text_Quantity_AnimalProduct;
     public Text Text_Animal_fence_counter;
 
     // Tempi di aggiornamento
@@ -35,8 +35,13 @@ public class Animal : MonoBehaviour
     public GameManger gameManager;
     void Start()
     {
-        hunger = 1f;
-        thirst = 1f;
+        hunger = 0f;
+        thirst = 0f;
+
+        barHunger.fillAmount = 0f;
+        barThirst.fillAmount = 0f;
+        barProduction.fillAmount = 0f;
+
     }
 
     void Update()
@@ -57,12 +62,20 @@ public class Animal : MonoBehaviour
             if (hunger <= 0.2f)
             {
                 // Modifica il tasso di aumento della produzione solo quando la fame è critica
-                productionIncreaseRate = 500f;
+                productionIncreaseRate = 400f;
             }
         }
         
 
         UpdateHungerBar();
+    }
+    public void decreaseThirst()
+    {
+        if(gameManager != null && gameManager.GetAnimalCount(NameAnimal) > 0)
+        {
+            thirst -= Time.deltaTime / thirstDecreaseRate;
+            thirst = Mathf.Clamp(hunger, minValue, maxValue);
+        }
     }
 
     private void IncreaseProduction()
