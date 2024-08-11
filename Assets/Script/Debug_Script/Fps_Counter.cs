@@ -17,7 +17,13 @@ public class Fps_Counter : MonoBehaviour
     // Timer per tenere traccia del tempo trascorso
     private float timer;
 
-    // Questo metodo viene chiamato una volta per frame
+
+
+    public void Start()
+    {
+        // test fps limitati sui 144 fissi
+        Application.targetFrameRate = 144;
+    }
     void Update()
     {
         //deltaTime viene aggiornato  con un filtro esponenziale per rendere il valore più stabile
