@@ -15,7 +15,7 @@ public class Player_Manager : MonoBehaviour
     public GameObject ButtonPlant;
 
 
-    private UnlockBuilding_System UnlockBuildingSystem;
+    //private UnlockBuilding_System UnlockBuildingSystem;
     public Text errorMessage;
     public Button ButtonBulding;
 
@@ -33,7 +33,9 @@ public class Player_Manager : MonoBehaviour
     private void Awake()
     {
         ButtonPlant.SetActive(false);
-        UnlockBuildingSystem = FindAnyObjectByType<UnlockBuilding_System>();
+
+
+        //UnlockBuildingSystem = FindAnyObjectByType<UnlockBuilding_System>();
     }
 
     public Vector3 GetPosition()
@@ -103,12 +105,11 @@ public class Player_Manager : MonoBehaviour
             Button_Log_Mill.SetActive(true);
         }
 
-        
+
     }
 
-  
-
-
+    /* System Bulding
+     * 
     private void OnAnotherButtonClick()
     {
         if (inZonaCostruzioni)
@@ -121,6 +122,8 @@ public class Player_Manager : MonoBehaviour
             UnlockBuildingSystem.animationfade.Play();
         }
     }
+
+    */
 
 
 

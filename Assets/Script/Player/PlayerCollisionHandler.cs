@@ -28,12 +28,6 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         }
 
-        // quando il player entra in collisione con la ZonaCostruzioni 
-        if (collider.gameObject.CompareTag("ZonaCostruzioni"))
-        {
-            
-
-        }
 
         if (collider.gameObject.CompareTag("ColliderDialogue"))
         {

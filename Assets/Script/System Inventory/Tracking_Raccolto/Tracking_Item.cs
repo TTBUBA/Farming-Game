@@ -47,7 +47,6 @@ public class Tracking_Item : MonoBehaviour
     }
 
 
-
     public void UpdateUiOrtaggi()
     {
         RaccoltoCarote = trakingRaccolto.RaccoltoCarote;
