@@ -188,6 +188,18 @@ SpriteAtlas:
     - 99104039f1ab666479dcabc728c08863: -1587692486
     - 94e6b8390d6e4744bb752e3e8751b740: -1074384011
     - e4e9a0499a5f9314b9400a9d1f50e02d: 21300000
+    - c9a3b749be647ed4b8283906fad38a61: 610401978
+    - c9a3b749be647ed4b8283906fad38a61: -2020386791
+    - c9a3b749be647ed4b8283906fad38a61: 79728265
+    - c9a3b749be647ed4b8283906fad38a61: 45912219
+    - c9a3b749be647ed4b8283906fad38a61: 1318759275
+    - c9a3b749be647ed4b8283906fad38a61: -95144936
+    - c9a3b749be647ed4b8283906fad38a61: -608941794
+    - c9a3b749be647ed4b8283906fad38a61: 2046907776
+    - c9a3b749be647ed4b8283906fad38a61: 939655777
+    - c9a3b749be647ed4b8283906fad38a61: -1091183463
+    - c9a3b749be647ed4b8283906fad38a61: 1957449631
+    - c9a3b749be647ed4b8283906fad38a61: -251480628
     - d19c766932c9ed1489634deb8fe9a4fd: 21300000
     - 083f7669fec4fd546b606f28a2aee28e: 21300000
     - 0e8e64a9a46a95244abd4066ff67e693: 21300000
@@ -402,6 +414,18 @@ SpriteAtlas:
   - {fileID: -1587692486, guid: 99104039f1ab666479dcabc728c08863, type: 3}
   - {fileID: -1074384011, guid: 94e6b8390d6e4744bb752e3e8751b740, type: 3}
   - {fileID: 21300000, guid: e4e9a0499a5f9314b9400a9d1f50e02d, type: 3}
+  - {fileID: 610401978, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: -2020386791, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: 79728265, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: 45912219, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: 1318759275, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: -95144936, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: -608941794, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: 2046907776, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: 939655777, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: -1091183463, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: 1957449631, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
+  - {fileID: -251480628, guid: c9a3b749be647ed4b8283906fad38a61, type: 3}
   - {fileID: 21300000, guid: d19c766932c9ed1489634deb8fe9a4fd, type: 3}
   - {fileID: 21300000, guid: 083f7669fec4fd546b606f28a2aee28e, type: 3}
   - {fileID: 21300000, guid: 0e8e64a9a46a95244abd4066ff67e693, type: 3}
@@ -615,6 +639,18 @@ SpriteAtlas:
   - ICON_NAME_SHOP_0
   - UI_DIalogue_Name_Player 1_0
   - wheat_03
+  - Small-8-Direction-Characters_by_AxulArt_9
+  - Small-8-Direction-Characters_by_AxulArt_8
+  - Small-8-Direction-Characters_by_AxulArt_7
+  - Small-8-Direction-Characters_by_AxulArt_6
+  - Small-8-Direction-Characters_by_AxulArt_5
+  - Small-8-Direction-Characters_by_AxulArt_4
+  - Small-8-Direction-Characters_by_AxulArt_3
+  - Small-8-Direction-Characters_by_AxulArt_2
+  - Small-8-Direction-Characters_by_AxulArt_1
+  - Small-8-Direction-Characters_by_AxulArt_0
+  - Small-8-Direction-Characters_by_AxulArt_10
+  - Small-8-Direction-Characters_by_AxulArt_11
   - l0_Icon_Pig
   - carrot_05
   - Button_Sell
