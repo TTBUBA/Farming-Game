@@ -9,6 +9,7 @@ public class notte_giorno : MonoBehaviour
     // public GameObject LuceAbitazioni;
     public GameObject[] LucePali;
     public TimeManager TimeManager;
+    public float transitionDuration = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +50,12 @@ public class notte_giorno : MonoBehaviour
     public void CycleNight_day()
     {
         int currentHour = TimeManager.Hour;
+
         if (currentHour >= 19 || currentHour < 8)
         {
-            Luce.intensity = 0.4f;
-            // LuceAbitazioni.SetActive(true);
+         
+            
+            StartCoroutine(ChangeLightIntensity(0.2f, transitionDuration));
 
             foreach (GameObject lucepali in LucePali)
             {
@@ -61,13 +64,30 @@ public class notte_giorno : MonoBehaviour
         }
         else
         {
-            Luce.intensity = 1f;
-            // LuceAbitazioni.SetActive(true);
+            
+            
+            StartCoroutine(ChangeLightIntensity(1f, transitionDuration));
 
             foreach (GameObject lucepali in LucePali)
             {
                 lucepali.SetActive(false);
             }
         }
+    }
+
+    public  IEnumerator ChangeLightIntensity(float targetIntensity , float Duration)
+    {
+        float startIntensity = Luce.intensity;
+        float TimeElapsed = 0f;
+
+        while (TimeElapsed < Duration)
+        {
+            Luce.intensity = Mathf.Lerp(startIntensity, targetIntensity, TimeElapsed / Duration);
+            TimeElapsed += Time.deltaTime;
+            
+            yield return null;
+        }
+
+        Luce.intensity = targetIntensity;
     }
 }
